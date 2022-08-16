@@ -14,3 +14,18 @@ const mix = require('laravel-mix');
 mix.js('resources/js/app.js', 'public/js')
     .sass('resources/sass/app.scss', 'public/css')
     .sourceMaps();
+
+
+mix.sass("resources/scss/style.scss", "public/site/style.css").options({
+    processCssUrls: false,
+});
+
+mix.postCss("resources/css/app.css", "public/site/css/").postCss(
+    "resources/css/jquery-ui.css",
+    "public/site/css/"
+);
+
+mix.copy("resources/css/fonts", "public/site/css/fonts");
+mix.copy("resources/css/icons", "public/site/css/icons");
+mix.copy("resources/dist", "public/site/dist");
+mix.copy("resources/assets", "public/assets");

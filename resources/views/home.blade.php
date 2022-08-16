@@ -1,7 +1,7 @@
 @extends('layouts.app')
 
 @section('content')
-<div class="container">
+<div class="container-fluid">
     <div class="row justify-content-center">
         <div class="col-md-8">
             <div class="card">
@@ -14,7 +14,8 @@
                         </div>
                     @endif
 
-                    {{ __('You are logged in!') }}
+                    <h1>Seja Bem-vindo!</h1>
+                    <a href="{{ url('usuarios') }}">Lista dos usuários</a>
                 </div>
             </div>
         </div>
